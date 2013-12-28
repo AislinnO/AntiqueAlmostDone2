@@ -1,0 +1,179 @@
+header{
+	height: 140px;
+	color: #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center; 
+	font-family: 'Trebuchet','Verdana', 'Geneva', 'sans-serif';
+	font-size: 38px;
+} 
+
+form{
+	width: 80em;
+	text-align: center;
+	margin-right: 0.5em;
+	display: block
+}
+
+legend{
+	width: 80em;
+}
+
+
+#slideshow{
+	margin: 10px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* overflow-y: scroll prevents Login from moving onto next line - I think it trims the y axis */
+ body{
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+	display: inline-block;
+	overflow-y: scroll;
+	font-family: Trebuchet MS;
+	font-size: 20px;
+	color: #A9A9A9;
+} 
+
+h1{
+	padding: 0;
+	margin: 0;
+}
+
+h2{
+	color: pink;
+	text-align: center;
+}
+
+h3{
+	color: #A9A9A9;
+	text-align: center;
+}
+
+
+
+a#changeLink{
+	width: 1675px;
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+	font-family: Trebuchet MS;
+	font-size: 20px;
+	color: #ccc;
+
+}
+
+
+/* not sure if this is working? */
+#nav{
+	background-color: white;
+}
+
+/*not sure what width 950px does here */
+ul{
+	width: 1150px; 
+	height: 100px;
+	margin: auto; 
+	list-style-type:none;
+	padding: 0;
+}
+
+ul li{
+	text-align: center; 
+	display:inline-block; 
+	font-size: 22px;
+	position:relative; 
+	padding:30px 20px 20px 0; 
+	margin:0 0 0 40px;
+}
+
+a{
+	display:block;
+	width:90px;
+	
+}
+
+/*Note colour was  	#ccc before change */
+a: link, a:visited
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+	font-size: 20px; 
+	color: #808080;
+}
+
+#nav ul li:hover {
+	text-decoration:underline;
+}
+
+#nav ul li a,visited{
+	color: #A9A9A9;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+}
+
+#nav ul li a:hover{
+	color: #D3D3D3;
+	text-decoration: none;
+}
+#nav li:hover ol{
+	display: block; float: left; 
+	position: absolute; 
+	background-color: pink; 
+	color: #ffffff;
+	text-align: centre;
+}
+#nav ol{
+	display: none; 
+	padding:0; 
+	margin:0;
+	height: 352px;
+}
+
+#nav ul ol li{
+	display: block;  
+	padding:10px; 
+	margin:10px;
+	color: #D3D3D3;
+
+#TeaCupTable{
+	width: 1150px;
+	height: 250px;
+	text-align: left;
+	position: center;	
+}
+
+table{
+	width: 1150px;
+	border-top-width: 10px;
+	border-right-width: 10px;
+	border-bottom-width: 10px;
+	border-left-width: 10px;
+}
+
+th{
+	vertical-align: center;
+}
+
+p{
+	text-align: left;
+}
+
+#AboutUs{
+	margin: 30px;
+	padding: 30px;
+	text-align: left;
+}
+
+#StyleLinks{
+	font-size: 14px;
+	color:  #A9A9A9;
+}
+
+div#footer{
+	text-align: center;
+}

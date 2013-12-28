@@ -1,0 +1,49 @@
+<h1>Catalog</h1>
+<br />
+<h2><%=@category%></h2>
+
+<table class="catalog">
+
+  <% @items.each do |item| %>
+      <tr>
+        <td>
+          <div class="image">
+            <%= link_to (image_tag item.image_url, :style => "height:100px"), item %>
+          </div>
+        </td>
+        <td>
+          <div class="title">
+            <%= link_to item.title, item %>
+          </div>
+          <div class="description">
+            <%=h item.description %>
+          </div>
+          <div class="price">
+            <%= number_to_currency(item.price, :unit => "&euro;") %>
+          </div>
+          <div class="links">
+
+            <a href="/cart/<%= item.id %>">Add to Cart</a><br><br>
+
+                <td><%= link_to 'Show', item %></td>
+
+            <% end %>
+
+
+          </div>
+        </td>
+      </tr>
+
+</table>
+
+
+<% if user_signed_in? && current_user.admin? %>
+
+    <p><%= link_to 'New item', new_item_path %></p>
+
+    <div class="links">
+    <td><%= link_to 'Edit', edit_item_path(item) %></td> |
+    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    </div>
+<% end %>

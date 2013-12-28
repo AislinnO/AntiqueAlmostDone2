@@ -1,0 +1,15 @@
+<h1>You just ordered</h1>
+<ul>
+  <% 
+		@cart.each do |item_id, qty|
+			item =Item.find(item_id)
+	%>
+	<li>
+			name = <%= item.title %>,
+			price = <%= item.price * qty %>
+		</li>
+	<% end %>
+</ul>
+<%= link_to "Return to Shopping", :action => "index" %>
+
+<%= link_to "Clear Cart", :action => "clearCart" %>

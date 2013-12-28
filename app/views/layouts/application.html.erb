@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserAntique</title>
+  <%= stylesheet_link_tag    "application2", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application2", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="header">
+		<header>
+		<h1>DainTea Couture</h1>
+		</header>
+	</div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<div id="nav">
+  <ul>
+    <li><a href='/home'>Home</a></li>
+    <li><a href='/items'>Products</a>
+    	<ol>
+						<li><%= render '/items/categoryDistinctList' %></li>
+		</ol>
+		</li>
+	<li><a href='/cart'>Cart</a></li>
+	<li><a href='/contact'>Contact</a></li>
+    <li><a href='/about'>About</a></li>
+    <% if user_signed_in? %>     <li><a href='/myprofile'>Profile</a></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= yield %>
+
+<% if user_signed_in? %>
+    <div>Signed in as <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete
+    %>)</div>
+<% else %>
+    <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
+
+<div class="searchbox">
+  <h2 class="BoxHeaders">Search</h2>
+  <%= render :partial => 'items/search' %>
+</div>
+
+<div class="footer">
+		<footer>
+		<h3>Say hello!</h3>
+		<h4>DainTea Couture Ltd.</h4>
+		<p>33 Made Up Street, Dublin 4, Ireland</p>
+		<p>Contact: hello@daintea-couture.ie; Ph: +353 (1) 123 4567</p>
+		</footer>
+	</div>
+
+
+</body>
+</html>
