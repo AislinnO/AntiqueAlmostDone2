@@ -36,6 +36,7 @@ UserAntique::Application.routes.draw do
   get '/clearCart' => 'cart#clearCart'
 
   get '/myprofile' => 'profiles#myprofile'
+  get '/myprofile/pastorders' => 'profiles#pastorders', as: :pastorders_profiles
   get '/admin' => 'user#admin_login'
   get '/logout' => 'user#logout'
   get '/checkout' => 'cart#createOrder'

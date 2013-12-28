@@ -1,0 +1,16 @@
+<h1>Test</h1>
+
+<% if @pastorders.empty? then %>
+	Go Buy so stuff
+<% else %>
+	<ul>
+	<% @pastorders.each do |pastorder| %>
+		<li> 
+			Bought on the <%= pastorder.created_at %>
+			<% pastorder.items.each do |item| %>
+				, <%= item.title %>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+<% end %>

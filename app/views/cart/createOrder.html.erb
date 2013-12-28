@@ -1,15 +1,21 @@
+
 <h1>You just ordered</h1>
-<ul>
+<table class="CheckoutTable">
   <% 
 		@cart.each do |item_id, qty|
 			item =Item.find(item_id)
 	%>
-	<li>
-			name = <%= item.title %>,
-			price = <%= item.price * qty %>
-		</li>
-	<% end %>
-</ul>
+	<tr>
+	<td>Title = <%= item.title %></td>
+	<td> Price = <%= number_to_currency(item.price, :unit => "€" ) %></td>
+	<td> Quantity = <%= item.quantity %></td>
+	</tr>
+	<tr>
+	<td>Total</td>
+	</tr>
+	
+<% end %>
+</table>
 <%= link_to "Return to Shopping", :action => "index" %>
 
 <%= link_to "Clear Cart", :action => "clearCart" %>

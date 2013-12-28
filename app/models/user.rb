@@ -5,8 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   #attr_accessor :email, :password, :password_confirmation, :remember_me
+  #attr_accessor :remember_me
 
-  has_one :profiles
+  has_one :profile
   has_many :orders
 
 

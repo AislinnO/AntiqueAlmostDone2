@@ -11,6 +11,18 @@ class ProfilesController < ApplicationController
       render action: 'show'
     end
   end
+  
+	# GET /myprofile/pastorders
+	# GET myprofile/pastorders.json
+	def pastorders
+		@profile = current_user.profile # Profile.find_by_user_id(current_user.id)
+		@pastorders = current_user.orders # Order.find_all_by_user_id(current_user.id)
+	
+		respond_to do |format|
+			format.html 
+			format.json { head :no_content }
+  		end
+	end
 
 
   # GET /profiles
