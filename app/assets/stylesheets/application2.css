@@ -19,12 +19,22 @@ legend{
 	width: 80em;
 }
 
+#AboutUs{
+	margin: 30px;
+	padding: 30px;
+	text-align: left;
+}
 
 #slideshow{
 	margin: 10px;
 	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+table{
+	text-align: center;
+	display: inline;
 }
 
 /* overflow-y: scroll prevents Login from moving onto next line - I think it trims the y axis */
@@ -140,7 +150,7 @@ a: link, a:visited
 	margin:10px;
 	color: #D3D3D3;
 
-#TeaCupTable{
+#catalog{
 	width: 1150px;
 	height: 250px;
 	text-align: left;
@@ -160,12 +170,6 @@ th{
 }
 
 p{
-	text-align: left;
-}
-
-#AboutUs{
-	margin: 30px;
-	padding: 30px;
 	text-align: left;
 }
 
